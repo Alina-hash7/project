@@ -1,15 +1,92 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
+<html lang="ru"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>веб-ресурс для начальных классов</title>
+    <title>веб-ресурс для начальной школы</title>
 </head>
 <body>
-    <h1>заголовок</h1>
-    главная страница
+    <header>
+        <img src="images/лого.png" alt="логотип" width="300" height="300">
+        <h1>начальная школа</h1>
+        <nav>
+            <ul>
+                <button><li><a href="#">Курсы</a></li></button>
+                <button><li><a href="#">О нас</a></li></button>  
+                <button><li><a href="#">Отзывы</a></li></button>
+                <button><li><a href="#">Ещё</a></li></button>
+            </ul>
+        </nav>
+        <button><a href="login.html">Вход</a></button>
+    </header>
+    <main class="main">
+        <section>
+            <div>
+                <h2>курсы началке</h2>
+                <a href="#" target="_blank">Все курсы</a>
+            </div>
+            <ul>
+                <li>
+                    <img src="images/number1_png14901.png" alt="первый класс" width="100" height="100">
+                    <h3>1 класс</h3>
+                    <p>Курсов: 7 </p>
+                    <a href="#">Узнать подробнее</a>
+                </li>
+                <li>
+                    <img src="images/2.jpg" alt="второй класс" width="100" height="100">
+                    <h3>2 класс</h3>
+                    <p>Курсов: 7</p>
+                    <a href="#">Узнать подробнее</a>
+                </li>
+                <li>
+                    <img src="images/3.jpg" alt="третий класс" width="100" height="100">
+                    <h3>3 класс</h3>
+                    <p>Курсов: 7</p>
+                    <a href="#">Узнать подробнее</a>
+                </li>
+                <li>
+                    <img src="images/4.jpg" alt="четвёртый класс" width="100" height="100">
+                    <h3>4 класс</h3>
+                    <p>Курсов: 7</p>
+                    <a href="#">Узнать подробнее</a>
+                </li>
+            </ul>
+        </section>
+        <section>
+            курсы
+        </section>
+        <section>
+            информация
+        </section>
+        <section>
+            Отзывы
+        </section>
+        <section>
+            <form action="/">
+                <h1>Вход в личный кабинет</h1>
+                <input type="tel" name="phone" placeholder="Номер телефона" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <button>Войти</button>
+            </form>
+        </section>
+        <section>
+            <form action="/">
+                <h1>Регестрация</h1>
+                <input type="name" name="name" placeholder="Имя" required>
+                <input type="surname" name="surname" placeholder="Фамилия" required>
+                <input type="tel" name="phone" placeholder="Номер телефона" required>
+                <input type="email" name="email" placeholder="электронная почта" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <button>Войти</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Сайт создан мной группа НК-25</p>
+        <ul>
+            <li><a href="#">Правовая оговорка</a></li>
+            <li><a href="#">Пользовательское соглашение</a></li>
+            <li><a href="#">Политика конфидециальности</a></li>
+        </ul>
+    </footer>
 </body>
-<footer>
-    подвал сайта
-</footer>
 </html>
