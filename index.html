@@ -5,30 +5,56 @@
     <title>веб-ресурс для начальной школы</title>
 </head>
 <body>
-    <header>
-        <img src="images/лого.png" alt="логотип" width="300" height="300">
-        <h1>начальная школа</h1>
-        <nav>
-            <ul>
-                <button><li><a href="#">Курсы</a></li></button>
-                <button><li><a href="#">О нас</a></li></button>  
-                <button><li><a href="#">Отзывы</a></li></button>
-                <button><li><a href="#">Ещё</a></li></button>
+    <header class="header">
+        <img class="header__logo" src="images/logo.png" alt="логотип" width="300" height="300">
+        <h1 class="header__title">начальная школа</h1>
+        <a class="header__button" href="login.html">Вход</a>
+        <a class="header__button" href="registration.html">Вход</a>
+        <nav class="header__menu">
+            <ul class="menu">
+                <li class="menu__item menu__item- -active">
+                    <a class="menu__link" href="index.html">Главная</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Курсы</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Преподаватели</a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#">Контакты</a>
+                </li>
             </ul>
-        </nav>
-        <button><a href="login.html">Вход</a></button>
+        </nav>   
     </header>
     <main class="main">
-        <section>
-            <div>
-                <h2>курсы началке</h2>
+        <section class="main__teachers">
+            <div class="teachers"> 
+                <h2 class="teachers__title"> Наши преподаватели</h2>
                 <a href="#" target="_blank">Все курсы</a>
             </div>
-            <ul>
-                <li>
-                    <img src="images/number1_png14901.png" alt="первый класс" width="100" height="100">
-                    <h3>1 класс</h3>
-                    <p>Курсов: 7 </p>
+            <div class="teachers__card"> 
+                <img class="teachers__image" src="images/teacher-1.png" alt="Фото преподавателя" width="350" height="350">
+                <p class="teachers__name">Полина Васильевна</p>
+                <p class="teachers__desc">Английский язык</p>
+            </div>
+            <div class="teachers__card">
+                <img class="teachers__image" src="images/teacher-2.png" alt="Фото преподавателя" width="350" height="350">
+                <p class="teachers__name">Анастасия Константиновна</p>
+                <p class="teachers__desc">Русский язык (правописание) и литература (чтение)</p>
+            </div>
+            <div class="teachers__card">
+                <img class="teachers__image" src="images/teacher-3.png" alt="Фото преподавателя" width="350" height="350">
+                <p class="teachers__name">Алина Рашидовна</p>
+                <p class="teachers__desc">Математика (ментальная математика)</p>
+            </div>
+        </section>  
+        <section class="classroom__list">  
+            <ul class="classroom">
+                <li class="classroom__itm">
+                    <img class="classroom__img" src="images/number1_png14901.png" alt="первый класс" width="100" height="100">
+                    <h3 class="classroom__header">1 класс</h3>
+                    <p class="classroom__itm">Курсов: 7 </p>
                     <a href="#">Узнать подробнее</a>
                 </li>
                 <li>
@@ -49,13 +75,13 @@
                     <p>Курсов: 7</p>
                     <a href="#">Узнать подробнее</a>
                 </li>
-            </ul>
+            </ul> 
         </section>
         <section>
-            курсы
+            Курсы
         </section>
         <section>
-            информация
+            Информация
         </section>
         <section>
             Отзывы
@@ -70,18 +96,18 @@
         </section>
         <section>
             <form action="/">
-                <h1>Регестрация</h1>
+                <h1>Регистрация</h1>
                 <input type="name" name="name" placeholder="Имя" required>
                 <input type="surname" name="surname" placeholder="Фамилия" required>
                 <input type="tel" name="phone" placeholder="Номер телефона" required>
-                <input type="email" name="email" placeholder="электронная почта" required>
+                <input type="email" name="email" placeholder="Электронная почта" required>
                 <input type="password" name="password" placeholder="Пароль" required>
                 <button>Войти</button>
             </form>
         </section>
     </main>
     <footer>
-        <p>Сайт создан мной группа НК-25</p>
+        <p>Сайт создан нами НК-25</p>
         <ul>
             <li><a href="#">Правовая оговорка</a></li>
             <li><a href="#">Пользовательское соглашение</a></li>
