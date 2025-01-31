@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'qwert';
+    font-weight: 700;
+    font-display: swap;
+src: url('fonts/SometypeMono-Medium.woff2') format(woff2);
+}
