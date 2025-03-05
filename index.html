@@ -1,130 +1,151 @@
 <!DOCTYPE html>
-<html lang="ru"><head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>веб-ресурс для начальной школы</title>
-    <link rel="stylesheet" href="styles/normalize.css">
+    <meta name="description" content="Современная онлайн-школа для начальных классов">
+    <title>Онлайн-школа для начальных классов</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <a class="header__logo-wrap" href="index.html">
-        <img class="header__logo" src="images/logoza.ru.png" alt="логотип" width="400" >
-        <h1 class="header__title">Начальная школа</h1>
-    </a>
-        <nav class="header__menu">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a class="menu__link" href="index.html">Главная</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Курсы</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Преподаватели</a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">Контакты</a>
-                </li>
-            </ul>
-        </nav>   
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="images/лого.png" alt="Логотип школы">
+                <h1>СуперШкола</h1>
+            </div>
+            <nav>
+                <button class="menu-toggle">☰</button>
+                <ul class="nav-list">
+                    <li><a href="#about">О школе</a></li>
+                    <li><a href="#courses">Курсы</a></li>
+                    <li><a href="#teachers">Учителя</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main class="container" id="main">
-        <section class="section card"  id="card">
-            <h2 class="section__title">Начальная школа</h2>
-            <p class="section__description">Учиться, учиться и ещё раз учиться.(В.И.Ленин)</p>
-            <div class="card__list">
-                <a class="card__item" href="#">
-                    <span class="card__icon">
-                        <img src="images/icon/menu.svg" alt="Иконка для простых блюд" width="22"
-                             height="24">
-                    </span>
-                    <h3 class="card__title">1 класс</h3>
-                    <p class="card__description">Обучение грамоте, математике и другим предметам</p>
-                </a>
-                <a class="card__item" href="#">
-                    <span class="card__icon">
-                        <img src="images/icon/cook.svg" alt="Иконка для детского меню" width="24"
-                        height="24">
-                    </span>
-                    <h3 class="card__title">2 класс</h3>
-                    <p class="card__description">Обучение математике, русскому языку, литературному чтению и другим предметам</p>
-                </a>
-                <a class="card__item" href="#">
-                    <span class="card__icon">
-                        <img src="images/icon/chef.svg" alt="Иконка для блюд от шеф-поваров" width="24"
-                        height="23">
-                    </span>
-                    <h3 class="card__title">3 класс</h3>
-                    <p class="card__description">Обучение математике, русскому языку, литературному чтению и другим предметам</p>
-                </a>
-                <a class="card__item" href="#">
-                    <span class="card__icon">
-                        <img src="images/icon/fire.svg" alt="Иконка для блюд на праздник" width="24"
-                        height="23">
-                    </span>
-                    <h3 class="card__title">4 класс</h3>
-                    <p class="card__description">Обучение математике, русскому языку, литературному чтению и другим предметам</p>
-                </a>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Увлекательное обучение для каждого ребёнка</h2>
+            <p>Современные методики, интерактивные занятия и опытные педагоги.</p>
+            <a href="#courses" class="btn btn-primary">Посмотреть курсы</a>
+            <img src="images/kid.jpg" alt="Дети учатся онлайн" class="hero-image">
+        </div>
+    </section>
+
+    <section id="about" class="fade-in about-section">
+        <div class="container">
+            <h2>О нашей школе</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Наша онлайн-школа создана для того, чтобы обучение стало увлекательным, доступным и эффективным.</p>
+                    <p>Мы используем современные методики, игровые технологии и интерактивные занятия, чтобы ребёнок получал знания с удовольствием.</p>
+                    <p>Наши преподаватели — это опытные и заботливые профессионалы, которые помогают каждому ученику раскрыть его потенциал.</p>
+                    <a href="#courses" class="btn btn-secondary">Узнать больше</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/hero.jpg" alt="Дети учатся с интересом">
+                </div>
             </div>
-        </section>
-        <section class="main__teachers">
-            <div class="teachers"> 
-                <h2 class="teachers__title"> Наши преподаватели</h2>
-                <a href="#" target="_blank">Все курсы</a>
+        </div>
+    </section>
+
+    <section id="courses" class="fade-in">
+        <div class="container">
+            <h2>Наши курсы</h2>
+            <div class="course-cards">
+                <div class="card">
+                    <img src="images/math.jpeg" alt="Математика">
+                    <h3>Математика</h3>
+                    <p>Интересные задания и увлекательные игры.</p>
+                    <button class="btn btn-secondary" onclick="toggleDetails('math')">Подробнее</button>
+                    <div class="course-details" id="math">
+                        <p>На этом курсе ваши дети научатся решать задачи, развивать логическое мышление и получать удовольствие от математики через игровые задания и конкурсы.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/russ.jpeg" alt="Русский язык">
+                    <h3>Русский язык</h3>
+                    <p>Грамотность, чтение и письмо с удовольствием.</p>
+                    <button class="btn btn-secondary" onclick="toggleDetails('language')">Подробнее</button>
+                    <div class="course-details" id="language">
+                        <p>Курс Русский язык включает в себя грамматические упражнения, чтение и письмо, а также интересные задания для развития речи и творческого письма.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/creativity.jpg" alt="Творчество">
+                    <h3>Творчество</h3>
+                    <p>Развитие воображения и творческих навыков.</p>
+                    <button class="btn btn-secondary" onclick="toggleDetails('creativity')">Подробнее</button>
+                    <div class="course-details" id="creativity">
+                        <p>Курс Творчество направлен на развитие воображения, обучение рисованию, моделированию, рукоделию и другим видам искусства.</p>
+                    </div>
+                </div>
             </div>
-            <div class="teachers__card"> 
-                <img class="teachers__image" src="images/polina.jpg" alt="Фото преподавателя" width="300" height="350">
-                <p class="teachers__name">Полина Васильевна</p>
-                <p class="teachers__desc">Английский язык</p>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="teachers" class="fade-in">
+        <div class="container">
+            <h2>Наши преподаватели</h2>
+            <div class="teachers-grid">
+                <div class="teacher-profile">
+                    <img src="images/teacher1.jpg" alt="Мария Ивановна">
+                    <h3>Мария Ивановна</h3>
+                    <p>Опытный педагог начальных классов с 10-летним стажем.</p>
+                </div>
+                <div class="teacher-profile">
+                    <img src="images/teacher2.jpg" alt="Анна Валерьевна">
+                    <h3>Анна Валерьевна</h3>
+                    <p>Педагог по математике с инновационными методами обучения.</p>
+                </div>
             </div>
-            <div class="teachers__card">
-                <img class="teachers__image" src="images/nas.jpg" alt="Фото преподавателя" width="400" height="350">
-                <p class="teachers__name">Анастасия Константиновна</p>
-                <p class="teachers__desc">Русский язык (правописание) и литература (чтение)</p>
+        </div>
+    </section>
+
+    <section id="reviews" class="fade-in">
+        <div class="container">
+            <h2>Отзывы родителей</h2>
+            <div class="review-slider">
+                <div class="review active">
+                    <p>"Отличная школа! Ребёнок начал учиться с удовольствием."</p>
+                    <span>— Валерия, мама Димы</span>
+                </div>
+                <div class="review">
+                    <p>"Уроки интересные, преподаватели внимательные и доброжелательные!"</p>
+                    <span>— Андрей, папа Софьи</span>
+                </div>
             </div>
-            <div class="teachers__card">
-                <img class="teachers__image" src="images/alina.jpg" alt="Фото преподавателя" width="400" height="350">
-                <p class="teachers__name">Алина Рашидовна</p>
-                <p class="teachers__desc">Математика (ментальная математика)</p>
-            </div>
-        </section>  
-        <section class="cours">
-            Курсы
-        </section>
-        <section class="info">
-            Информация
-        </section>
-        <section class="reviews">
-            Отзывы
-        </section>
-        <section class="login__form">
-            <form action="/">
-                <h1>Вход в личный кабинет</h1>
-                <input type="tel" name="phone" placeholder="Номер телефона" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <button>Войти</button>
+            <button class="btn btn-secondary" id="prev-review">&#10094;</button>
+            <button class="btn btn-secondary" id="next-review">&#10095;</button>
+        </div>
+    </section>
+
+    <section id="contacts" class="fade-in">
+        <div class="container">
+            <h2>Контакты</h2>
+            <p>Есть вопросы? Свяжитесь с нами!</p>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="email" name="email" placeholder="Ваш Email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit" class="btn btn-primary">Отправить</button>
             </form>
-        </section>
-        <section class="register__form">
-            <form action="/">
-                <h1>Регистрация</h1>
-                <input type="name" name="name" placeholder="Имя" required>
-                <input type="surname" name="surname" placeholder="Фамилия" required>
-                <input type="tel" name="phone" placeholder="Номер телефона" required>
-                <input type="email" name="email" placeholder="Электронная почта" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <button>Войти</button>
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <p>Сайт создан нами НК-25</p>
-        <ul class="footer__link__menu">
-            <li><a class="footer__link" href="#">Правовая оговорка</a></li>
-            <li><a class="footer__link" href="#">Пользовательское соглашение</a></li>
-            <li><a class="footer__link" href="#">Политика конфидециальности</a></li>
-        </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Онлайн-школа «Умничка». Все права защищены.</p>
+        </div>
     </footer>
-<script src="js/script.js"></script>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>

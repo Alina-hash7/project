@@ -1,0 +1,99 @@
+/* ===== Наши курсы ===== */
+#courses {
+    background-color: #f8fbff;
+    padding: 80px 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.course-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 280px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 15px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Кнопка */
+.btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.course-details {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #34495e;
+}
+
+/* Анимация для появления деталей */
+.course-details.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Плавная анимация появления секции курсов */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

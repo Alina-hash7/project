@@ -1,0 +1,163 @@
+/* ========== Основные стили сайта ========== */
+
+/* Подключение современного шрифта от Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Сброс базовых стилей */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные настройки для HTML и BODY */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8faff;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Основной контейнер для выравнивания и центрирования контента */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4 {
+    color: #2b3445;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+/* Стили для ссылок */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b6b;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: #ff6b6b;
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ee5253;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Общие стили секций сайта */
+section {
+    padding: 80px 0;
+}
+
+/* Плавное появление элементов (анимация) */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стилизация списков */
+ul {
+    list-style: none;
+}
+
+/* Стилизация форм и полей ввода (если будут использоваться) */
+input, textarea, button {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+input, textarea {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #dddddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6b6b;
+}
+
+/* Стилизация скроллбара */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6b6b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ee5253;
+}
+
+/* Адаптивность (Responsive) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .container {
+        padding: 0 15px;
+    }
+    section {
+        padding: 60px 0;
+    }
+}

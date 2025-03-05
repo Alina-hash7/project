@@ -1,0 +1,86 @@
+/* ====== Секция Контакты ====== */
+
+#contacts {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    padding: 80px 0;
+    position: relative;
+}
+
+#contacts .container {
+    text-align: center;
+}
+
+#contacts h2 {
+    font-size: 32px;
+    color: #34495e;
+    margin-bottom: 15px;
+}
+
+#contacts p {
+    font-size: 18px;
+    color: #7f8c8d;
+    margin-bottom: 40px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0 0 8px rgba(255,107,107,0.3);
+}
+
+#contact-form textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+#contact-form button.btn-primary {
+    background-color: #ff6b6b;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-form button.btn-primary:hover {
+    background-color: #ee5253;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255,107,107,0.3);
+}
+
+/* Адаптивность формы */
+@media (max-width: 768px) {
+    #contacts {
+        padding: 60px 0;
+    }
+
+    #contact-form {
+        padding: 20px;
+    }
+}

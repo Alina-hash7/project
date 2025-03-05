@@ -1,0 +1,30 @@
+.review-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.review {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.review.active {
+    display: block;
+}
+
+#prev-review, #next-review {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#prev-review {
+    left: 10px;
+}
+
+#next-review {
+    right: 10px;
+}

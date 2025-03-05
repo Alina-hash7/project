@@ -1,0 +1,122 @@
+/* ======= Секция "О нашей школе" ======= */
+
+#about {
+    padding: 80px 0;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+#about h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #ff6b6b;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.about-content .about-text {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+}
+
+.about-content .about-text p {
+    font-size: 17px;
+    color: #606f89;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.about-content .about-text .btn.btn-secondary {
+    margin-top: 15px;
+    display: inline-block;
+    background: linear-gradient(to right, #ff6b6b, #ff8787);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.about-content .about-text .btn.btn-secondary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+}
+
+.about-content .about-image {
+    flex: 1;
+    min-width: 280px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.about-content .about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-content .about-image:hover img {
+    transform: scale(1.1);
+}
+
+/* Эффект появления fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #about {
+        padding: 50px 0;
+    }
+
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    #about h2 {
+        font-size: 28px;
+    }
+
+    .about-content .about-text p {
+        font-size: 16px;
+    }
+}

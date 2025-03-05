@@ -1,0 +1,37 @@
+/* ===== Наши преподаватели ===== */
+#teachers {
+    padding: 70px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.teacher-profile {
+    background-color: #f0f8ff;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+    transition: transform 0.3s;
+}
+
+.teacher-profile:hover {
+    transform: translateY(-10px);
+}
+
+.teacher-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.teacher-profile h3 {
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.teacher-profile p {
+    font-size: 15px;
+    color: #7f8c8d;
+    max-width: 350px;
+}
