@@ -1,3 +1,9 @@
+'use strict'
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log('Скрипт отработал корректно')
+});
+
 // 1. Адаптивное меню (гамбургер-меню)
 const menuToggle = document.querySelector('.menu-toggle');
 const navList = document.querySelector('.nav-list');
