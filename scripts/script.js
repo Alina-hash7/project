@@ -106,3 +106,37 @@ function toggleDetails(courseId) {
         }, 300); // Даем время на анимацию
     }
 }
+// Preloader страницы
+const preloader = document.querySelector('.preloader');
+const content = document.querySelectorAll('.loader__content');
+if (preloader && content) {
+    setTimeout(() => {
+        // Скрываем прелоадер
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+
+        // Показываем контент
+       content.style.display = 'block';
+
+        // Удаляем элемент из DOM
+        preloader.remove();
+    }, 1000); // Задержка 3 секунды
+}
+// Кнопка прокрутки вверх
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Показываем кнопку при прокрутке вниз
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.style.display = "block";
+        } else {
+            scrollToTopBtn.style.display = "none";
+        }
+    });
+
+    // Прокрутка вверх при клике
+    scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
