@@ -1,32 +1,40 @@
-/* Ğ¡ĞºÑ€Ñ‹Ğ²Ğ°ĞµĞ¼ ĞºĞ¾Ğ½Ñ‚ĞµĞ½Ñ‚ Ğ´Ğ¾ Ğ·Ğ°Ğ³Ñ€ÑƒĞ·ĞºĞ¸ */
-.content {
-    display: none;
+#preloader {
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
 }
 
-/* Ğ¡Ñ‚Ğ¸Ğ»Ğ¸ Ğ´Ğ»Ñ Ğ¿Ñ€ĞµĞ»Ğ¾Ğ°Ğ´ĞµÑ€Ğ° */
-.preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-    background: #fefefb;
-    transition: opacity 0.5s ease;
+.sk-cube-grid {
+  width: 80px;
+  height: 80px;
+  margin: 100px auto;
 }
 
-.loader {
-    width: 60px;
-    height: 60px;
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #4a90e2;
+  float: left;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
 
-    border: 8px solid #fbf9f4;
-    border-top: 8px solid #fdb100;
-    border-radius: 50%;
+.sk-cube-grid .sk-cube1 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 { animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 { animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 { animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 { animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 { animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 { animation-delay: 0.2s; }
 
-    animation: spin 1s linear infinite;
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% { transform: scale3D(1, 1, 1); }
+  35% { transform: scale3D(0.5, 0.5, 1); }
 }

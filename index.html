@@ -6,8 +6,26 @@
     <meta name="description" content="Современная онлайн-школа для начальных классов">
     <title>Онлайн-школа для начальных классов</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
+
+
+<!-- Preloader -->
+<div id="preloader">
+  <div class="sk-cube-grid">
+    <div class="sk-cube sk-cube1"></div>
+    <div class="sk-cube sk-cube2"></div>
+    <div class="sk-cube sk-cube3"></div>
+    <div class="sk-cube sk-cube4"></div>
+    <div class="sk-cube sk-cube5"></div>
+    <div class="sk-cube sk-cube6"></div>
+    <div class="sk-cube sk-cube7"></div>
+    <div class="sk-cube sk-cube8"></div>
+    <div class="sk-cube sk-cube9"></div>
+  </div>
+</div>
+
     <header>
         <div class="container header-container">
             <div class="logo">
@@ -53,44 +71,45 @@
         </div>
     </section>
 
-    <section id="courses" class="fade-in">
-        <div class="container">
-            <h2>Наши курсы</h2>
-            <div class="course-cards">
-                <div class="card">
-                    <img src="images/math.jpeg" alt="Математика">
-                    <h3>Математика</h3>
-                    <p>Интересные задания и увлекательные игры.</p>
-                    <button class="btn btn-secondary" onclick="toggleDetails('math')">Подробнее</button>
-                    <div class="course-details" id="math">
-                        <p>На этом курсе ваши дети научатся решать задачи, развивать логическое мышление и получать удовольствие от математики через игровые задания и конкурсы.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/russ.jpeg" alt="Русский язык">
-                    <h3>Русский язык</h3>
-                    <p>Грамотность, чтение и письмо с удовольствием.</p>
-                    <button class="btn btn-secondary" onclick="toggleDetails('language')">Подробнее</button>
-                    <div class="course-details" id="language">
-                        <p>Курс Русский язык включает в себя грамматические упражнения, чтение и письмо, а также интересные задания для развития речи и творческого письма.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="images/creativity.jpg" alt="Творчество">
-                    <h3>Творчество</h3>
-                    <p>Развитие воображения и творческих навыков.</p>
-                    <button class="btn btn-secondary" onclick="toggleDetails('creativity')">Подробнее</button>
-                    <div class="course-details" id="creativity">
-                        <p>Курс Творчество направлен на развитие воображения, обучение рисованию, моделированию, рукоделию и другим видам искусства.</p>
-                    </div>
+<section id="courses" class="fade-in">
+    <div class="container">
+        <h2>Наши курсы</h2>
+        <div class="course-cards" id="courseCards">
+            <!--
+            <div class="card">
+                <img src="images/math.jpeg" alt="Математика">
+                <h3>Математика</h3>
+                <p>Интересные задания и увлекательные игры.</p>
+                <button class="btn btn-secondary" onclick="toggleDetails('math')">Подробнее</button>
+                <div class="course-details" id="math">
+                    <p>На этом курсе ваши дети научатся решать задачи, развивать логическое мышление и получать удовольствие от математики через игровые задания и конкурсы.</p>
                 </div>
             </div>
-            <div class="preloader">
-                <div class="loader"></div>
+            <div class="card">
+                <img src="images/russ.jpeg" alt="Русский язык">
+                <h3>Русский язык</h3>
+                <p>Грамотность, чтение и письмо с удовольствием.</p>
+                <button class="btn btn-secondary" onclick="toggleDetails('language')">Подробнее</button>
+                <div class="course-details" id="language">
+                    <p>Курс Русский язык включает в себя грамматические упражнения, чтение и письмо, а также интересные задания для развития речи и творческого письма.</p>
+                </div>
             </div>
+            <div class="card">
+                <img src="images/creativity.jpg" alt="Творчество">
+                <h3>Творчество</h3>
+                <p>Развитие воображения и творческих навыков.</p>
+                <button class="btn btn-secondary" onclick="toggleDetails('creativity')">Подробнее</button>
+                <div class="course-details" id="creativity">
+                    <p>Курс Творчество направлен на развитие воображения, обучение рисованию, моделированию, рукоделию и другим видам искусства.</p>
+                </div>
+            </div>
+            -->
         </div>
-    </section>
-    
+        <div class="preloader">
+            <div class="loader"></div>
+        </div>
+    </div>
+</section>
     
     
 
@@ -112,23 +131,22 @@
         </div>
     </section>
 
-    <section id="reviews" class="fade-in">
-        <div class="container">
-            <h2>Отзывы родителей</h2>
-            <div class="review-slider">
-                <div class="review active">
-                    <p>"Отличная школа! Ребёнок начал учиться с удовольствием."</p>
-                    <span>— Валерия, мама Димы</span>
-                </div>
-                <div class="review">
-                    <p>"Уроки интересные, преподаватели внимательные и доброжелательные!"</p>
-                    <span>— Андрей, папа Софьи</span>
-                </div>
-            </div>
-            <button class="btn btn-secondary" id="prev-review">&#10094;</button>
-            <button class="btn btn-secondary" id="next-review">&#10095;</button>
-        </div>
-    </section>
+<div class="swiper reviews-swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <p>"Отличная школа! Ребёнок начал учиться с удовольствием."</p>
+      <span>— Валерия, мама Димы</span>
+    </div>
+    <div class="swiper-slide">
+      <p>"Уроки интересные, преподаватели внимательные и доброжелательные!"</p>
+      <span>— Андрей, папа Софьи</span>
+    </div>
+  </div>
+  <!-- Навигация -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+</div>
 
     <section id="contacts" class="fade-in">
         <div class="container">
@@ -149,6 +167,8 @@
         </div>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 </html>

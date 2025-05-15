@@ -1,30 +1,78 @@
-.review-slider {
-    position: relative;
-    overflow: hidden;
-    max-width: 600px;
-    margin: 0 auto;
+.reviews-swiper {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px; /* Максимальная ширина контейнера отзывов */
+  margin: 60px auto; /* Отступы сверху и снизу для лучшего позиционирования */
+  padding: 40px; /* Внутренние отступы для содержимого */
+  background-color: #fff; /* Белый фон контейнера */
+  border-radius: 15px; /* Скругленные углы контейнера */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Тень для придания глубины */
+  transition: transform 0.3s ease; /* Плавный эффект при наведении */
 }
 
-.review {
-    display: none;
-    text-align: center;
-    padding: 20px;
+.reviews-swiper:hover {
+  transform: translateY(-5px); /* Поднимаем контейнер при наведении */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
 }
 
-.review.active {
-    display: block;
+.swiper-slide {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid #f0f0f0; /* Тонкая граница для каждого слайда */
+  border-radius: 10px;
+  background-color: #f8f8f8; /* Светло-серый фон для слайда */
+  transition: background-color 0.3s ease; /* Плавный переход цвета фона */
 }
 
-#prev-review, #next-review {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.swiper-slide:hover {
+  background-color: #fafafa; /* Чуть более темный фон при наведении */
 }
 
-#prev-review {
-    left: 10px;
+.swiper-slide p {
+  font-size: 1.2rem; /* Размер шрифта для текста отзыва */
+  line-height: 1.7; /* Межстрочный интервал для лучшей читаемости */
+  color: #333; /* Темно-серый цвет текста */
+  margin-bottom: 20px; /* Отступ снизу для абзаца */
 }
 
-#next-review {
-    right: 10px;
+.swiper-slide span {
+  font-style: italic;
+  font-size: 1rem; /* Размер шрифта для имени автора */
+  color: #666; /* Светло-серый цвет имени автора */
+  display: block; /* Отображаем имя автора на новой строке */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #4a90e2; /* Основной цвет кнопок навигации */
+  font-size: 32px; /* Размер иконок навигации */
+  transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #2962ff; /* Более темный цвет при наведении */
+}
+
+.swiper-pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: #4a90e2; /* Цвет активной точки */
+  opacity: 0.6; /* Прозрачность неактивных точек */
+  border-radius: 50%; /* Круглая форма точек */
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* Плавный переход прозрачности и цвета */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2962ff; /* Цвет активной точки */
+  opacity: 1; /* Полная непрозрачность активной точки */
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.8; /* Увеличиваем прозрачность при наведении */
 }
